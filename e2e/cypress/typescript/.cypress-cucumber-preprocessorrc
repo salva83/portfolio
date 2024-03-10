@@ -1,0 +1,10 @@
+{
+    "stepDefinitions": "cypress/e2e/steps/stepDefinitions/**/*.step.ts",
+    "filterSpecs": true,
+    "omitFiltered": true,
+    "json": {
+      "enabled": true,
+      "formatter": "cucumber-json-formatter",
+      "output": "reports/json/cucumber-report.json"
+   }
+}

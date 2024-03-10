@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:node/recommended",
+    "plugin:import/errors",
+    "plugin:cypress/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "ES2022",
+    "sourceType": "module"
+  },
+
+  "plugins": ["@typescript-eslint", "prettier", "node", "import", "cypress"],
+  "rules": {
+    "prettier/prettier": "error",
+    "node/no-unsupported-features/es-syntax": [
+      "error",
+      { "ignores": ["modules"] }
+    ],
+    "node/no-unpublished-import": "warn",
+    "node/no-missing-import": "warn"
+  },
+  "ignorePatterns": ["node_modules/*"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
