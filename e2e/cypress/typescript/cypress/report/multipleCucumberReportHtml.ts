@@ -16,6 +16,8 @@ if (process.argv.length < 3) {
 
 // Get the environment from the command-line arguments
 const ENVIRONMENT_RUN: string = process.argv[2];
+const TAGS: string = process.argv.length> 3 ? process.argv[3] : "";
+
 
 // Get the environment values from the .env files in the cypress/helpers/environment folder
 //TODO - Add the code to read the .env file and get the environment values
@@ -44,6 +46,7 @@ const options: GenerateOptions = {
       { label: "Release", value: "1.0.0" },
       { label: "Execution Time", value: DATE_TIME },
       { label: "Environment", value: ENVIRONMENT_RUN },
+      { label: "Tags", value: TAGS },
     ],
   },
 };

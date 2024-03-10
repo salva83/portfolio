@@ -5,6 +5,7 @@ Feature: As I user I want to check the TODO page so I get a good user experience
     Given I go to the TODO page
     And I see todos in the header
 
+    @test_01
     Scenario: User lands on the TODO and types an element into the todo list
     Given I can enter text pay in the textbox
     When I submit the entry with enter

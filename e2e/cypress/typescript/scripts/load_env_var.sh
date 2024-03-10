@@ -7,6 +7,7 @@ ENV_VAR="CYPRESS_ENVIRONMENT"
 ENV_DIR="./environment"
 
 echo "Start loading environment variables with script script_load_env_var.sh."
+echo "Test suite tags are: $TEST_SUITE_TAGS"
 
 # Get the value of the environment variable to define the target environment and later fetch configuration
 environment="${!ENV_VAR}"

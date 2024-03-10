@@ -7,10 +7,10 @@
   "license": "MIT",
   "scripts": {
     "cypress:open": "cypress open",
-    "precypress:run": "yarn install && export CYPRESS_ENVIRONMENT=$CYPRESS_ENVIRONMENT",
-    "cypress:run": "scripts/load_env_var.sh && cypress run",
+    "precypress:run": "yarn install",
+    "cypress:run": "scripts/load_env_var.sh && cypress run --env tags=$TEST_SUITE_TAGS",
     "postcypress:run": "yarn report:multiple",
-    "report:multiple": "npx ts-node ./cypress/report/multipleCucumberReportHtml.ts $CYPRESS_ENVIRONMENT",
+    "report:multiple": "npx ts-node ./cypress/report/multipleCucumberReportHtml.ts $CYPRESS_ENVIRONMENT $TEST_SUITE_TAGS",
     "lint": "eslint . \"**/*.{js,ts}\" --ignore-path .gitignore",
     "format": "prettier --write ."
   },
