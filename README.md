@@ -31,6 +31,7 @@ Below is an overview of the contents and structure of this repository along the 
 ├── performance
 │ └── python_locust
 └── testing_resources
+  └── api_testing_resources
 ```
 
 
@@ -54,12 +55,15 @@ Below is an overview of the contents and structure of this repository along the 
 5. **performance**: Resources related to performance testing.
    - **python_locust**: Scripts and configurations for Python and Locust.
 
+6. **testing_resources**: Resources related to performance testing.
+   - **api_testing_resources**: API usable open endpoints , tools and reso.
 
 ## Usage
 
 Feel free to explore each folder to access scripts, configurations, and templates. 
 
-Each folder has separate README.md files for specific instructions generally including dockerized executions and local runs. 
+Each folder has separate README.md files for specific instructions.
+Code generally includes dockerized executions and how to run locally.
 
 
 ## License
@@ -74,4 +78,4 @@ If you have suggestions for improvements, new features, or would like to report 
 
 For any inquiries or collaboration opportunities, you can reach me via email at [salvador.github@gmail.com](mailto:salvador.github@gmail.com).
 
-Thank you for visiting my QA Automation / SDET portfolio!
+Thank you for visiting my portfolio!
