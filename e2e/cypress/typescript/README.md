@@ -217,6 +217,8 @@ Which are the possible improvements for this project?
 - Include more tests
 - Categorisation of tests to run in parallel
 - Additional tags for test categorisation
+- Improve tags management and usage
+- Improve tags usage in reporting
 - Generation of documentation with tools like TypeDoc
 - Include husky hooks to run code quality and standards checks before commit
 - Rerun failed tests configuration
