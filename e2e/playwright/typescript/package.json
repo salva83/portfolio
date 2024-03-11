@@ -1,0 +1,41 @@
+{
+  "name": "test_project",
+  "version": "1.0.0",
+  "description": "test project",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "echo 'Configuration' && echo '--- ENVIRONMENT='$ENVIRONMENT && echo '--- TEST_SUITE_TAGS='$TEST_SUITE_TAGS && yarn install",
+    "test": "cross-env ENVIRONMENT='${ENVIRONMENT}' TEST_SUITE_TAGS='${TEST_SUITE_TAGS}' cucumber-js test --config=config/cucumber.js ",
+    "posttest": "yarn report",
+    "report": "npx ts-node src/helpers/report/report.ts",
+    "lint": "eslint . \"**/*.{js,ts}\" --ignore-path .gitignore",
+    "format": "prettier --write . --ignore-path .gitignore"
+  },
+  "keywords": [
+    "cucumber",
+    "playwright",
+    "typescript"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.3.1",
+    "@playwright/test": "^1.41.2",
+    "@types/node": "^20.11.17",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.4",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "multiple-cucumber-html-reporter": "^3.6.2",
+    "playwright": "^1.42.0",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "typescript": "^5.3.3"
+  }
+}
